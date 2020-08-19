@@ -1,0 +1,16 @@
+<h1 class="text-center">Private Tasks</h1>
+<br>
+<div class="row">
+  <div class="col-md-4" *ngFor="let task of privateTasks; index as i;">
+      <div class="card text-white bg-success mb-3">
+        <div class="card-header"><span class="badge badge-primary badge-pill">{{i}}</span></div>
+          <div class="card-body">
+              <h3 class="card-title">{{task.name}}</h3>
+              <p class="card-text">{{task.description}}</p>
+          </div>
+          <div class="card-footer">
+              {{task.date | date: 'shortDate'}}
+          </div>
+      </div>
+  </div>
+</div>
